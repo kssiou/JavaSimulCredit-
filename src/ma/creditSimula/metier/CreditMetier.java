@@ -1,8 +1,11 @@
 package ma.creditSimula.metier;
 
-import lombok.var;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ma.creditSimula.dao.IDao;
 import ma.creditSimula.modele.Credit;
+@Data @AllArgsConstructor @NoArgsConstructor
 
 public class CreditMetier implements ICreditMetier  {
     IDao<Credit,Long> creditDao;

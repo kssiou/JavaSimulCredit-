@@ -3,7 +3,6 @@ package ma.creditSimula.modele;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import lombok.var;
 
 @Data @AllArgsConstructor @NoArgsConstructor
 public class Credit {

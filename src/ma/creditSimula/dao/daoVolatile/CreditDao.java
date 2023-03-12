@@ -1,6 +1,5 @@
 package ma.creditSimula.dao.daoVolatile;
 
-import lombok.var;
 import ma.creditSimula.dao.IDao;
 import ma.creditSimula.modele.Credit;
 

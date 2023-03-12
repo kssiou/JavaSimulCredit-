@@ -1,7 +1,11 @@
 package ma.creditSimula.presentation;
 
-import lombok.var;
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ma.creditSimula.metier.ICreditMetier;
+@Data @AllArgsConstructor @NoArgsConstructor
+
 
 public class CreditControleur implements ICreditControleur {
     ICreditMetier creditMetier ;
