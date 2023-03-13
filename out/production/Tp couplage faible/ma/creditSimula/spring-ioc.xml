@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+        http://www.springframework.org/schema/beans/spring-beans.xsd">
+
+    <!-- services -->
+
+    <bean id="dao" class="ma.creditSimula.dao.daoVolatile.CreditDao"></bean>
+    <bean id="metier" class="ma.creditSimula.metier.CreditMetier">
+        <constructor-arg ref="dao"/>
+    </bean>
+    <bean id="creditControleur" class="ma.creditSimula.presentation.CreditControleur">
+        <constructor-arg  ref="metier"/></bean>
+</beans>

@@ -1,12 +1,17 @@
 package ma.creditSimula.dao.daoVolatile;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
 import ma.creditSimula.dao.IDao;
 import ma.creditSimula.modele.Credit;
+import org.springframework.stereotype.Component;
+import org.springframework.stereotype.Repository;
 
 import java.util.Arrays;
 import java.util.HashSet;
 import java.util.Set;
-
+@Component("dao")
 public class CreditDao implements IDao<Credit,Long> {
 
    static Set<Credit> BD_Credit(){

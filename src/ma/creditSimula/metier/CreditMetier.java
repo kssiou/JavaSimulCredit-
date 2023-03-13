@@ -5,10 +5,15 @@ import lombok.Data;
 import lombok.NoArgsConstructor;
 import ma.creditSimula.dao.IDao;
 import ma.creditSimula.modele.Credit;
+import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.beans.factory.annotation.Qualifier;
+import org.springframework.stereotype.Service;
 @Data @AllArgsConstructor @NoArgsConstructor
-
+@Service("metier")
 public class CreditMetier implements ICreditMetier  {
-    IDao<Credit,Long> creditDao;
+@Autowired
+@Qualifier("dao")
+IDao<Credit,Long> creditDao;
 
     @Override
     public Credit calculer_mentualite(Long idcredit) throws Exception{
