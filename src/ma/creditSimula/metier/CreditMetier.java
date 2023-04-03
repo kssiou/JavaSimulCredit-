@@ -4,6 +4,7 @@ import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import ma.creditSimula.dao.IDao;
+import ma.creditSimula.dao.daoExceptions.DAOException;
 import ma.creditSimula.modele.Credit;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Qualifier;
@@ -16,7 +17,7 @@ public class CreditMetier implements ICreditMetier  {
 IDao<Credit,Long> creditDao;
 
     @Override
-    public Credit calculer_mentualite(Long idcredit) throws Exception{
+    public Credit calculer_mentualite(Long idcredit) throws Exception, DAOException {
         var credit =creditDao.trouverParID(idcredit);
         if(credit==null){
             throw new Exception("id du credit est incorecte :: [ Credit non trouver ]");

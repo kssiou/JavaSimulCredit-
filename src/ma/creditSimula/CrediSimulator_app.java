@@ -18,6 +18,7 @@ import java.util.Properties;
 import java.util.Scanner;
 
 public class CrediSimulator_app {
+
     static ICreditControleur creditControleur;
 
     static Scanner clavier = new Scanner(System.in);
@@ -108,8 +109,10 @@ public class CrediSimulator_app {
         ApplicationContext context = new AnnotationConfigApplicationContext("ma.creditSimula.dao","ma.creditSimula.metier","ma.creditSimula.presentation");
         creditControleur=context.getBean(ICreditControleur.class);
         creditControleur.afficher_mentualite(1L);
+
     }
     public static void main(String[] args) throws Exception {
     test4();
+
     }
 }
